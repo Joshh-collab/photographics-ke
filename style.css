@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ============ DESIGN TOKENS ============ */
+@theme {
+    --color-ink: #111111;
+    --color-charcoal: #181818;
+    --color-cream: #f7f6f2;
+    --color-line: #e7e5df;
+    --color-slate: #777777;
+    --color-gold: #d8a84e;
+    --color-gold-dark: #87621c;
+
+    /* Neutral ramp */
+    --color-neutral-50: #eeeeee;
+    --color-neutral-100: #dddddd;
+    --color-neutral-200: #cccccc;
+    --color-neutral-300: #bbbbbb;
+    --color-neutral-400: #aaaaaa;
+    --color-neutral-600: #666666;
+    --color-neutral-700: #555555;
+    --color-neutral-800: #444444;
+    --color-neutral-900: #333333;
+    --color-neutral-950: #292929;
+    --color-void: #0d0d0d;
+    --color-graphite: #222222;
+
+    --font-sans: "DM Sans", sans-serif;
+    --font-serif: "Playfair Display", serif;
+}
+
+/* ============ BASE STYLING ============ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+img {
+    @apply w-full block;
+}
+
+/* Reusable container width wrapper (Tailwind v4 syntax) */
+@utility container {
+    margin-inline: auto;
+    width: min(90%, 1200px);
+}
+
+/* ============ COMPONENT CLASSES ============ */
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center min-h-[52px] px-7 border border-transparent font-bold text-[0.85rem] transition duration-300 cursor-pointer;
+    }
+    .btn-primary { 
+        @apply bg-gold text-ink; 
+    }
+    .btn-primary:hover { 
+        @apply bg-white -translate-y-[3px]; 
+    }
+    .btn-outline { 
+        @apply border-white/50 text-white; 
+    }
+    .btn-outline:hover { 
+        @apply bg-white text-ink; 
+    }
+
+    .package-button {
+        @apply block py-[14px] border border-ink text-center text-[0.8rem] font-bold transition duration-300;
+    }
+    .package-button:hover { 
+        @apply bg-ink text-white; 
+    }
+
+    .nav-link {
+        @apply text-[0.8rem] font-semibold opacity-85 transition duration-300;
+    }
+    .nav-link:hover { 
+        @apply text-gold opacity-100; 
+    }
+
+    .footer-link {
+        @apply text-neutral-400 text-[0.8rem] transition duration-300;
+    }
+    .footer-link:hover { 
+        @apply text-white; 
+    }
+
+    .section-heading { 
+        @apply max-w-[700px] mb-[55px]; 
+    }
+    .section-title {
+        @apply font-serif text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] font-semibold;
+    }
+
+    .portfolio-overlay {
+        @apply absolute inset-x-0 bottom-0 p-[25px] text-white translate-y-[10px] transition duration-300;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    }
+    .group:hover .portfolio-overlay { 
+        @apply translate-y-0; 
+    }
+
+    .checklist-item {
+        @apply py-[10px] border-b border-neutral-200 text-[0.85rem] text-neutral-700 flex items-center gap-2.5;
+    }
+}
+
+/* ============ INTERACTIVE UI STATES & OVERRIDES ============ */
+/* Unlayered rules to reliably override utility defaults on active states */
+.nav-links.active { 
+    transform: translateY(0) !important; 
+}
+
+.filter-btn.active,
+.filter-btn:hover { 
+    background: var(--color-ink) !important; 
+    border-color: var(--color-ink) !important; 
+    color: #ffffff !important; 
+}
+
+/* Lightbox Modal Animation State */
+#lightboxModal.open {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Before/After Retouch Slider Layout */
+.compare-wrapper {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.compare-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}

@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      PhotographicsKE — Photography, Branding & Creative Media in Kenya
+    </title>
+
+    <meta
+      name="description"
+      content="PhotographicsKE is a premier creative agency in Kenya delivering photography, videography, branding, graphic design, and editing solutions."
+    />
+    <link rel="canonical" href="https://www.photographicske.com/" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="PhotographicsKE — Visual Storytelling & Creative Media Kenya"
+    />
+    <meta
+      property="og:description"
+      content="Photography, videography, graphic design and digital communication solutions in Kenya."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- High-End Vector Camera Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8a84e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z'/%3E%3Ccircle cx='12' cy='13' r='3'/%3E%3C/svg%3E"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist.css" />
+  </head>
+
+  <body
+    class="bg-cream text-ink font-sans selection:bg-gold selection:text-ink overflow-x-hidden"
+  >
+    <header
+      class="header fixed top-0 left-0 w-full z-[1000] bg-black/85 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300"
+      id="navbarHeader"
+    >
+      <nav
+        class="container mx-auto px-6 h-[80px] flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <a
+          href="#home"
+          class="logo flex items-center gap-1.5 text-base font-extrabold tracking-[0.12em] group"
+        >
+          <span
+            class="p-1.5 bg-gold text-ink rounded-sm font-black text-sm group-hover:scale-105 transition-transform"
+            >PK</span
+          >
+          <span>PHOTOGRAPHICS</span><strong class="text-gold">KE</strong>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button
+          class="menu-toggle hidden max-[900px]:block p-2 -mr-2 bg-transparent border-none text-white cursor-pointer"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <svg
+            id="menuIcon"
+            class="w-6 h-6 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul
+          class="nav-links hidden md:flex items-center gap-8 list-none"
+          id="navLinks"
+        >
+          <li><a href="#home" class="nav-link active-nav">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#compare" class="nav-link">Retouching</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Book CTA -->
+        <a
+          href="#contact"
+          class="hidden lg:inline-block border border-gold/80 px-5 py-2 text-[0.75rem] font-bold tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-ink hover:shadow-lg hover:shadow-gold/20 rounded-sm"
+        >
+          Book Us
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Drawer Overlay -->
+      <div
+        class="mobile-drawer hidden md:hidden bg-charcoal border-b border-white/10 px-6 py-6 transition-all duration-300"
+        id="mobileDrawer"
+      >
+        <ul class="flex flex-col gap-4 list-none">
+          <li>
+            <a
+              href="#home"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#compare"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Retouching</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#packages"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="mobile-link text-sm font-bold uppercase tracking-wider text-white hover:text-gold block py-1"
+              >Contact</a
+            >
+          </li>
+          <li class="pt-2">
+            <a
+              href="#contact"
+              class="block text-center bg-gold text-ink py-3 text-xs font-extrabold uppercase tracking-widest rounded-sm"
+            >
+              Book a Session
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="pt-[80px]">
+      <section
+        class="hero min-h-[calc(100vh-80px)] flex items-center relative text-white bg-[url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-fixed"
+        id="home"
+      >
+        <!-- Dark Gradient Vignette Overlay -->
+        <div
+          class="hero-overlay absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"
+        ></div>
+
+        <div class="container mx-auto px-6 relative z-10 py-20">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6"
+          >
+            <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+            <p
+              class="text-[0.7rem] tracking-[0.2em] uppercase font-bold text-neutral-200"
+            >
+              CREATIVE MEDIA &amp; STORYTELLING • KENYA
+            </p>
+          </div>
+
+          <h1
+            class="max-w-4xl font-serif text-[clamp(2.8rem,7.5vw,6.5rem)] leading-[0.98] font-semibold tracking-tight"
+          >
+            We capture
+            <span class="text-gold italic font-normal">moments</span>
+            that matter.
+          </h1>
+
+          <p
+            class="hero-description max-w-2xl mt-6 mb-10 text-neutral-300 text-base md:text-lg leading-relaxed"
+          >
+            PhotographicsKE delivers high-impact photography, videography,
+            graphic design, and digital communication solutions that help
+            brands, events, and individuals in Kenya stand out and connect.
+          </p>
+
+          <div class="hero-buttons flex flex-wrap gap-4 items-center">
+            <a href="#portfolio" class="btn btn-primary">
+              View Selected Work
+            </a>
+            <a href="#contact" class="btn btn-outline"> Book a Session </a>
+          </div>
+
+          <!-- Floating Quick Stats -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/15 max-w-2xl"
+          >
+            <div>
+              <span class="block text-3xl font-serif font-bold text-gold"
+                >100+</span
+              >
+              <span class="text-xs text-neutral-400 uppercase tracking-wider"
+                >Projects Completed</span
+              >
+            </div>
+            <div>
+              <span class="block text-3xl font-serif font-bold text-gold"
+                >4.9 ★</span
+              >
+              <span class="text-xs text-neutral-400 uppercase tracking-wider"
+                >Client Rating</span
+              >
+            </div>
+            <div>
+              <span class="block text-3xl font-serif font-bold text-gold"
+                >Nairobi</span
+              >
+              <span class="text-xs text-neutral-400 uppercase tracking-wider"
+                >HQ &amp; Travel Ready</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 items-center gap-3 text-neutral-400 text-[0.65rem] tracking-[0.2em] uppercase font-semibold"
+        >
+          <span>SCROLL TO EXPLORE</span>
+          <div class="w-12 h-px bg-neutral-500 animate-pulse"></div>
+        </div>
+      </section>
+
+      <section class="about py-24 bg-cream" id="about">
+        <div class="container mx-auto px-6">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+          >
+            <!-- Visual Frame Column -->
+            <div class="lg:col-span-5 relative">
+              <div
+                class="relative z-10 rounded-lg overflow-hidden shadow-2xl group"
+              >
+                <img
+                  class="w-full h-[520px] object-cover transition duration-700 group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=1000&q=80"
+                  alt="Photographer behind camera lens"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"
+                ></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <span
+                    class="text-gold text-xs font-bold uppercase tracking-widest"
+                    >Nairobi Studio</span
+                  >
+                  <h4 class="font-serif text-xl font-bold">
+                    Driven by Passion &amp; Precision
+                  </h4>
+                </div>
+              </div>
+
+              <!-- Decorative Accent Border -->
+              <div
+                class="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold rounded-lg -z-0 hidden sm:block"
+              ></div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="lg:col-span-7">
+              <p
+                class="text-[0.75rem] tracking-[0.25em] font-bold text-gold-dark uppercase mb-3"
+              >
+                ABOUT PHOTOGRAPHICSKE
+              </p>
+
+              <h2 class="section-title text-ink">
+                Creativity meets
+                <em class="italic text-gold-dark">storytelling.</em>
+              </h2>
+
+              <p class="mt-6 text-neutral-700 text-base leading-relaxed">
+                PhotographicsKE is a Kenyan creative agency built on the vision
+                that every brand, event, and portrait deserves a distinctive
+                visual voice. What started with a single camera has expanded
+                into a full-spectrum digital media showcase.
+              </p>
+
+              <p class="mt-4 text-neutral-700 text-base leading-relaxed">
+                From high-profile corporate galas and intimate portraits to
+                vibrant branding campaigns and crisp video productions, we bring
+                together art, strategy, and technical mastery.
+              </p>
+
+              <!-- Key Pillar Highlights -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                <div
+                  class="p-4 bg-white rounded border border-line flex items-start gap-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold-dark shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                    ></path>
+                    <circle cx="12" cy="13" r="3" stroke-width="1.8"></circle>
+                  </svg>
+                  <div>
+                    <h4 class="font-bold text-sm text-ink">High-Res Clarity</h4>
+                    <p class="text-xs text-slate mt-1">
+                      Full frame 4K capture with prime lens sharpness.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="p-4 bg-white rounded border border-line flex items-start gap-3"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold-dark shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <h4 class="font-bold text-sm text-ink">Fast Delivery</h4>
+                    <p class="text-xs text-slate mt-1">
+                      Edited preview highlights delivered within 48 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services py-24 bg-charcoal text-white" id="services">
+        <div class="container mx-auto px-6">
+          <div class="max-w-2xl mb-16">
+            <p
+              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-3"
+            >
+              WHAT WE DO
+            </p>
+            <h2 class="section-title text-white">
+              Our creative
+              <em class="italic text-gold">services.</em>
+            </h2>
+            <p class="mt-4 text-neutral-400 text-base">
+              Tailored solutions tailored to help brands, institutions, and
+              individuals communicate effectively.
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service Card 1 -->
+            <article
+              class="service-card p-8 bg-graphite border border-white/10 rounded-sm hover:border-gold transition-all duration-300 hover:-translate-y-2 group"
+            >
+              <div
+                class="text-gold font-mono text-xs font-bold mb-10 tracking-widest flex justify-between items-center"
+              >
+                <span>01 / SERVICE</span>
+                <svg
+                  class="w-6 h-6 text-gold"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                  ></path>
+                  <circle cx="12" cy="13" r="3" stroke-width="1.8"></circle>
+                </svg>
+              </div>
+              <h3
+                class="font-serif text-2xl font-semibold mb-3 group-hover:text-gold transition-colors"
+              >
+                Photography
+              </h3>
+              <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                High-end event coverage, portraits, graduations, corporate
+                functions, and lifestyle shoots.
+              </p>
+              <a
+                href="#contact"
+                onclick="selectServiceInForm('Photography')"
+                class="group inline-flex items-center gap-2 mt-[30px] text-gold text-[0.8rem] font-bold tracking-wider uppercase"
+              >
+                <span>Enquire</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service Card 2: Videography -->
+            <article
+              class="service-card p-8 bg-graphite border border-white/10 rounded-sm hover:border-gold transition-all duration-300 hover:-translate-y-2 group"
+            >
+              <div
+                class="text-gold font-mono text-xs font-bold mb-10 tracking-widest flex justify-between items-center"
+              >
+                <span>02 / SERVICE</span>
+                <svg
+                  class="w-6 h-6 text-gold"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="font-serif text-2xl font-semibold mb-3 group-hover:text-gold transition-colors"
+              >
+                Videography
+              </h3>
+              <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                Cinematic event highlight reels, documentaries, promotional
+                videos, and social reels.
+              </p>
+              <a
+                href="#contact"
+                onclick="selectServiceInForm('Videography')"
+                class="group inline-flex items-center gap-2 mt-[30px] text-gold text-[0.8rem] font-bold tracking-wider uppercase"
+              >
+                <span>Enquire</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service Card 3: Graphic Design -->
+            <article
+              class="service-card p-8 bg-graphite border border-white/10 rounded-sm hover:border-gold transition-all duration-300 hover:-translate-y-2 group"
+            >
+              <div
+                class="text-gold font-mono text-xs font-bold mb-10 tracking-widest flex justify-between items-center"
+              >
+                <span>03 / SERVICE</span>
+                <svg
+                  class="w-6 h-6 text-gold"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="font-serif text-2xl font-semibold mb-3 group-hover:text-gold transition-colors"
+              >
+                Graphic Design
+              </h3>
+              <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                Brand identity systems, posters, social media banners, event
+                graphics, and marketing brochures.
+              </p>
+              <a
+                href="#contact"
+                onclick="selectServiceInForm('Graphic Design')"
+                class="group inline-flex items-center gap-2 mt-[30px] text-gold text-[0.8rem] font-bold tracking-wider uppercase"
+              >
+                <span>Enquire</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </article>
+
+            <!-- Service Card 4: Editing & Grading -->
+            <article
+              class="service-card p-8 bg-graphite border border-white/10 rounded-sm hover:border-gold transition-all duration-300 hover:-translate-y-2 group"
+            >
+              <div
+                class="text-gold font-mono text-xs font-bold mb-10 tracking-widest flex justify-between items-center"
+              >
+                <span>04 / SERVICE</span>
+                <svg
+                  class="w-6 h-6 text-gold"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="font-serif text-2xl font-semibold mb-3 group-hover:text-gold transition-colors"
+              >
+                Editing &amp; Grading
+              </h3>
+              <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                Professional color grading, frequency separation retouching, and
+                cinematic audio editing.
+              </p>
+              <a
+                href="#compare"
+                class="group inline-flex items-center gap-2 mt-[30px] text-gold text-[0.8rem] font-bold tracking-wider uppercase"
+              >
+                <span>See Retouching Demo</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="compare py-24 bg-void text-white border-t border-white/10"
+        id="compare"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <p
+              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-3"
+            >
+              QUALITY SHOWCASE
+            </p>
+            <h2 class="section-title">
+              Color Grading &amp;
+              <em class="italic text-gold">Retouching.</em>
+            </h2>
+            <p class="mt-4 text-neutral-400 text-sm">
+              Drag the interactive handle left and right to compare raw unedited
+              capture vs. final polished grading.
+            </p>
+          </div>
+
+          <!-- Interactive Comparison Widget -->
+          <div
+            class="max-w-4xl mx-auto relative rounded-lg overflow-hidden shadow-2xl border border-white/20 before-after-container aspect-[16/10] bg-charcoal"
+            id="sliderContainer"
+          >
+            <!-- After Image (Full Background) -->
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80"
+              alt="Edited Portrait with color grading"
+              class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+            />
+            <span
+              class="absolute top-4 right-4 bg-gold text-ink font-bold text-xs px-3 py-1 rounded shadow"
+              >FINAL EDIT</span
+            >
+
+            <!-- Before Image (Clipped Overlay) -->
+            <div
+              class="before-overlay absolute inset-0 w-1/2 overflow-hidden select-none pointer-events-none"
+              id="beforeOverlay"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80"
+                alt="Raw Portrait"
+                class="absolute inset-0 w-full h-full object-cover max-w-none grayscale brightness-75 contrast-75"
+                id="beforeImg"
+              />
+              <span
+                class="absolute top-4 left-4 bg-black/80 text-white font-bold text-xs px-3 py-1 rounded border border-white/20"
+                >RAW / BEFORE</span
+              >
+            </div>
+
+            <!-- Draggable Handle Bar -->
+            <div
+              class="slider-handle absolute top-0 bottom-0 left-1/2 w-1 bg-gold cursor-ew-resize -translate-x-1/2 z-20 flex items-center justify-center"
+              id="sliderHandle"
+            >
+              <div
+                class="w-10 h-10 bg-gold text-ink rounded-full shadow-2xl flex items-center justify-center font-bold text-lg select-none"
+              >
+                ⟷
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio py-24 bg-cream" id="portfolio">
+        <div class="container mx-auto px-6">
+          <!-- Header & Filter Tabs -->
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+          >
+            <div>
+              <p
+                class="text-[0.75rem] tracking-[0.25em] font-bold text-gold-dark uppercase mb-3"
+              >
+                SELECTED WORK
+              </p>
+              <h2 class="section-title text-ink">
+                Our
+                <em class="italic text-gold-dark">portfolio.</em>
+              </h2>
+            </div>
+
+            <!-- Category Filters -->
+            <div
+              class="filter-buttons flex flex-wrap gap-2"
+              role="group"
+              aria-label="Filter gallery"
+            >
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="events">Events</button>
+              <button class="filter-btn" data-filter="portraits">
+                Portraits
+              </button>
+              <button class="filter-btn" data-filter="photography">
+                Photography
+              </button>
+              <button class="filter-btn" data-filter="branding">
+                Branding
+              </button>
+            </div>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div
+            class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            id="portfolioGrid"
+          >
+            <!-- Portfolio Item 1 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="events"
+              data-title="Event Stories &amp; Celebrations"
+              data-sub="Corporate &amp; Social Galas"
+              data-src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Sony A7 IV"
+              data-lens="24-70mm f/2.8 GM"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+                  alt="Event photography"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Events</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  Event Stories
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="portraits"
+              data-title="Studio &amp; Location Portraits"
+              data-sub="Professional Headshots"
+              data-src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Canon EOS R5"
+              data-lens="85mm f/1.4 L"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                  alt="Portrait photography"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Portraits</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  People &amp; Personalities
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="branding"
+              data-title="Visual Brand Identity"
+              data-sub="Campaign Concepts"
+              data-src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Graphic Suite"
+              data-lens="Vector &amp; Print"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80"
+                  alt="Brand design"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Branding</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  Brand Identity Design
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="photography"
+              data-title="Behind The Scenes Studio"
+              data-sub="Creative Lighting"
+              data-src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Sony A7S III"
+              data-lens="35mm f/1.4 GM"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
+                  alt="Behind the lens photography"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Photography</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  Behind The Lens
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="portraits"
+              data-title="Executive &amp; Corporate Portraits"
+              data-sub="Editorial Style"
+              data-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Nikon Z7 II"
+              data-lens="105mm f/2.8 Macro"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                  alt="Executive portrait"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Portraits</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  Executive Headshots
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div
+              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              data-category="events"
+              data-title="Summit &amp; Conference Coverage"
+              data-sub="Nairobi Keynotes"
+              data-src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80"
+              data-camera="Sony FX3"
+              data-lens="70-200mm f/2.8"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
+                  alt="Corporate event"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
+              >
+                <span
+                  class="text-gold text-xs font-bold uppercase tracking-widest"
+                  >Events</span
+                >
+                <h3 class="font-serif text-2xl font-semibold mt-1">
+                  Corporate Summits
+                </h3>
+                <p class="text-xs text-neutral-300 mt-2">
+                  Click to expand high-res view
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="testimonials py-20 bg-charcoal text-white border-t border-white/10"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-xl mx-auto mb-12">
+            <p
+              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-2"
+            >
+              TESTIMONIALS
+            </p>
+            <h2 class="font-serif text-3xl md:text-4xl font-semibold">
+              Client Words
+            </h2>
+          </div>
+
+          <div
+            class="max-w-3xl mx-auto relative bg-graphite p-8 md:p-12 rounded-lg border border-white/10 shadow-xl"
+          >
+            <div
+              id="testimonialContainer"
+              class="transition-opacity duration-300"
+            >
+              <p class="text-gold text-4xl font-serif mb-4">“</p>
+              <p
+                class="text-base md:text-lg text-neutral-200 italic leading-relaxed mb-6"
+                id="testimonialText"
+              >
+                PhotographicsKE delivered exceptional coverage for our annual
+                regional summit in Nairobi. The turnaround time for press-ready
+                photos was under 24 hours and the quality was world-class.
+              </p>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-gold text-ink font-bold flex items-center justify-center font-serif text-lg"
+                  id="testimonialAvatar"
+                >
+                  EA
+                </div>
+                <div>
+                  <h4
+                    class="font-bold text-white text-base"
+                    id="testimonialName"
+                  >
+                    Emmanuel A.
+                  </h4>
+                  <p class="text-xs text-neutral-400" id="testimonialRole">
+                    Communications Director, East Africa Summit
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div
+              class="flex gap-3 justify-end mt-6 pt-4 border-t border-white/10"
+            >
+              <button
+                id="prevTestimonial"
+                class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors"
+              >
+                ←
+              </button>
+              <button
+                id="nextTestimonial"
+                class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="packages py-24 bg-[#eeece6]" id="packages">
+        <div class="container mx-auto px-6">
+          <div class="max-w-2xl mb-16">
+            <p
+              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold-dark uppercase mb-3"
+            >
+              PRICING PACKAGES
+            </p>
+            <h2 class="section-title text-ink">
+              Simple,
+              <em class="italic text-gold-dark">transparent</em>
+              pricing.
+            </h2>
+            <p class="mt-4 text-slate text-base">
+              Choose a starting package below or contact us for a custom
+              solution tailored to your timeline.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Standard Event Package -->
+            <article
+              class="package-card relative p-8 bg-white border border-neutral-200 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span
+                  class="text-gold-dark text-xs font-bold uppercase tracking-widest"
+                  >PHOTOGRAPHY</span
+                >
+                <h3 class="font-serif text-2xl font-bold mt-2">
+                  Standard Event
+                </h3>
+                <div class="price my-4 text-4xl font-extrabold text-ink">
+                  <span class="text-sm font-medium text-slate">KES</span> 5,000
+                </div>
+                <p class="text-slate text-xs mb-6">
+                  Ideal for short sessions, birthdays, and mini events (up to 3
+                  hrs).
+                </p>
+
+                <ul class="mb-8 list-none">
+                  <li class="checklist-item">Up to 3 hours shoot time</li>
+                  <li class="checklist-item">50+ Edited high-res photos</li>
+                  <li class="checklist-item">Private online gallery link</li>
+                  <li class="checklist-item">48-Hour preview delivery</li>
+                </ul>
+              </div>
+
+              <button
+                onclick="bookPackage('Standard Event', '5,000', 'Photography')"
+                class="package-button"
+              >
+                Book Package
+              </button>
+            </article>
+
+            <!-- Full-Day Popular Package -->
+            <article
+              class="package-card relative p-8 bg-white border-2 border-gold rounded-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform md:-translate-y-2"
+            >
+              <div
+                class="absolute -top-3.5 right-6 px-3 py-1 bg-gold text-ink font-bold text-[0.65rem] tracking-widest uppercase rounded"
+              >
+                MOST POPULAR
+              </div>
+
+              <div>
+                <span
+                  class="text-gold-dark text-xs font-bold uppercase tracking-widest"
+                  >FULL COVERAGE</span
+                >
+                <h3 class="font-serif text-2xl font-bold mt-2">
+                  Full-Day Event
+                </h3>
+                <div class="price my-4 text-4xl font-extrabold text-ink">
+                  <span class="text-sm font-medium text-slate">KES</span> 10,000
+                </div>
+                <p class="text-slate text-xs mb-6">
+                  Comprehensive coverage for weddings, graduations, and full
+                  events.
+                </p>
+
+                <ul class="mb-8 list-none">
+                  <li class="checklist-item">Up to 6 hours shoot time</li>
+                  <li class="checklist-item">
+                    150+ Professionally retouched photos
+                  </li>
+                  <li class="checklist-item">
+                    Online gallery + USB drive delivery
+                  </li>
+                  <li class="checklist-item">
+                    Social media teaser reel included
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                onclick="bookPackage('Full-Day Event', '10,000', 'Photography')"
+                class="package-button bg-gold text-ink border-gold hover:bg-ink hover:text-white"
+              >
+                Book Package
+              </button>
+            </article>
+
+            <!-- Corporate Package -->
+            <article
+              class="package-card relative p-8 bg-white border border-neutral-200 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <span
+                  class="text-gold-dark text-xs font-bold uppercase tracking-widest"
+                  >CORPORATE</span
+                >
+                <h3 class="font-serif text-2xl font-bold mt-2">
+                  Corporate Seminar
+                </h3>
+                <div class="price my-4 text-4xl font-extrabold text-ink">
+                  <span class="text-sm font-medium text-slate">KES</span> 20,000
+                </div>
+                <p class="text-slate text-xs mb-6">
+                  Full visual press coverage, keynotes, and team headshots.
+                </p>
+
+                <ul class="mb-8 list-none">
+                  <li class="checklist-item">
+                    Full day event &amp; keynote coverage
+                  </li>
+                  <li class="checklist-item">
+                    Executive headshots for speakers
+                  </li>
+                  <li class="checklist-item">
+                    Same-day highlight media release
+                  </li>
+                  <li class="checklist-item">
+                    Commercial usage rights included
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                onclick="
+                  bookPackage('Corporate Seminar', '20,000', 'Photography')
+                "
+                class="package-button"
+              >
+                Book Package
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact py-24 bg-charcoal text-white" id="contact">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            <!-- Contact Details Column -->
+            <div class="lg:col-span-5">
+              <p
+                class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-3"
+              >
+                GET IN TOUCH
+              </p>
+              <h2 class="section-title text-white">
+                Let's talk about
+                <em class="italic text-gold">your project.</em>
+              </h2>
+              <p class="mt-4 text-neutral-400 text-sm leading-relaxed">
+                Tell us what you are planning and we'll get back to you with a
+                tailored creative proposal and quote.
+              </p>
+
+              <div class="mt-10 space-y-6 border-t border-neutral-800 pt-8">
+                <div>
+                  <span
+                    class="text-gold text-[0.7rem] font-bold uppercase tracking-widest block mb-1"
+                    >Email</span
+                  >
+                  <a
+                    href="mailto:namwangajoshua@gmail.com"
+                    class="text-white hover:text-gold text-base transition-colors"
+                    >namwangajoshua@gmail.com</a
+                  >
+                </div>
+
+                <div>
+                  <span
+                    class="text-gold text-[0.7rem] font-bold uppercase tracking-widest block mb-1"
+                    >WhatsApp &amp; Phone</span
+                  >
+                  <a
+                    href="https://wa.me/254103423895?text=Hello%20PhotographicsKE,%20I'm%20interested%20in%20your%20services."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white hover:text-gold text-base transition-colors flex items-center gap-2"
+                  >
+                    <span>+254 103 423 895</span>
+                    <span
+                      class="text-xs bg-emerald-600/30 text-emerald-400 px-2 py-0.5 rounded-full font-bold"
+                      >Online</span
+                    >
+                  </a>
+                </div>
+
+                <div>
+                  <span
+                    class="text-gold text-[0.7rem] font-bold uppercase tracking-widest block mb-1"
+                    >Location</span
+                  >
+                  <p class="text-white text-base">
+                    Nairobi, Kenya (Available for travel nationwide)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Column -->
+            <div class="lg:col-span-7">
+              <form
+                class="p-8 md:p-10 bg-graphite rounded-lg border border-white/10 shadow-2xl space-y-6"
+                id="contactForm"
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block mb-2 text-xs font-bold uppercase tracking-wider text-neutral-300"
+                      >Your Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="John Doe"
+                      class="w-full p-4 bg-charcoal border border-neutral-800 rounded text-white text-sm focus:outline-none focus:border-gold transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-xs font-bold uppercase tracking-wider text-neutral-300"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      class="w-full p-4 bg-charcoal border border-neutral-800 rounded text-white text-sm focus:outline-none focus:border-gold transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="serviceSelect"
+                    class="block mb-2 text-xs font-bold uppercase tracking-wider text-neutral-300"
+                    >Service Category</label
+                  >
+                  <select
+                    id="serviceSelect"
+                    name="service"
+                    class="w-full p-4 bg-charcoal border border-neutral-800 rounded text-white text-sm focus:outline-none focus:border-gold transition-colors"
+                  >
+                    <option value="Photography">Photography</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Editing">Editing &amp; Retouching</option>
+                    <option value="Package Booking">Package Booking</option>
+                    <option value="Other">Other Custom Inquiry</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block mb-2 text-xs font-bold uppercase tracking-wider text-neutral-300"
+                    >Project Details *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Tell us about your event, date, venue, or project details..."
+                    class="w-full p-4 bg-charcoal border border-neutral-800 rounded text-white text-sm focus:outline-none focus:border-gold transition-colors resize-y"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">
+                  Send Message Inquiry
+                </button>
+
+                <!-- Toast Message Container -->
+                <div
+                  id="formToast"
+                  class="hidden p-4 rounded text-xs font-bold text-center"
+                ></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="lightboxModal"
+      class="fixed inset-0 z-[2000] bg-black/95 backdrop-blur-xl flex flex-col justify-between hidden opacity-0 transition-opacity duration-300"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Lightbox Header -->
+      <div
+        class="p-6 flex items-center justify-between text-white border-b border-white/10 z-10"
+      >
+        <div>
+          <span
+            id="lbCategory"
+            class="text-gold text-xs font-bold uppercase tracking-widest"
+            >Category</span
+          >
+          <h3 id="lbTitle" class="font-serif text-lg font-bold">Image Title</h3>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <span id="lbCounter" class="text-xs text-neutral-400 font-mono"
+            >1 / 6</span
+          >
+          <button
+            id="lbClose"
+            class="text-2xl text-neutral-400 hover:text-white p-2 focus:outline-none"
+            aria-label="Close modal"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Display Frame -->
+      <div
+        class="relative flex-1 flex items-center justify-center p-4 overflow-hidden"
+      >
+        <button
+          id="lbPrev"
+          class="absolute left-4 z-20 text-white text-3xl bg-black/50 border border-white/20 hover:border-gold hover:text-gold w-12 h-12 rounded-full flex items-center justify-center transition-colors focus:outline-none"
+        >
+          ‹
+        </button>
+
+        <img
+          id="lbImage"
+          src=""
+          alt="Expanded View"
+          class="max-h-[75vh] max-w-[90vw] object-contain rounded shadow-2xl transition-all duration-300 scale-95"
+        />
+
+        <button
+          id="lbNext"
+          class="absolute right-4 z-20 text-white text-3xl bg-black/50 border border-white/20 hover:border-gold hover:text-gold w-12 h-12 rounded-full flex items-center justify-center transition-colors focus:outline-none"
+        >
+          ›
+        </button>
+      </div>
+
+      <!-- Lightbox Footer EXIF Data -->
+      <div
+        class="p-4 bg-charcoal/80 border-t border-white/10 text-neutral-400 text-xs flex flex-wrap justify-between items-center gap-4 px-8"
+      >
+        <div class="flex items-center gap-4">
+          <span
+            >📷
+            <strong class="text-white" id="lbCamera">Sony A7 IV</strong></span
+          >
+          <span
+            >🔍 <strong class="text-white" id="lbLens">24-70mm</strong></span
+          >
+        </div>
+        <p class="text-neutral-500">Use Left / Right arrow keys to navigate</p>
+      </div>
+    </div>
+
+    <footer
+      class="footer pt-16 pb-8 bg-void text-white border-t border-neutral-900"
+    >
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12">
+          <div class="md:col-span-5">
+            <a
+              href="#home"
+              class="logo flex items-center gap-1.5 text-base font-extrabold tracking-[0.12em]"
+            >
+              <span class="p-1.5 bg-gold text-ink rounded-sm font-black text-sm"
+                >PK</span
+              >
+              <span>PHOTOGRAPHICS</span><strong class="text-gold">KE</strong>
+            </a>
+            <p class="mt-4 text-neutral-500 text-sm max-w-sm leading-relaxed">
+              Creative agency in Kenya offering professional photography, video
+              production, branding, and retouching services.
+            </p>
+          </div>
+
+          <div class="md:col-span-3">
+            <h4
+              class="text-xs font-bold text-gold uppercase tracking-widest mb-4"
+            >
+              Quick Navigation
+            </h4>
+            <ul class="space-y-2 list-none">
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li>
+                <a href="#compare" class="footer-link">Retouching Demo</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="footer-link">Portfolio Showcase</a>
+              </li>
+              <li>
+                <a href="#packages" class="footer-link">Pricing Packages</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-4">
+            <h4
+              class="text-xs font-bold text-gold uppercase tracking-widest mb-4"
+            >
+              Direct Contact
+            </h4>
+            <p class="text-neutral-400 text-sm mb-2">Nairobi, Kenya</p>
+            <p class="text-neutral-400 text-sm mb-2">
+              Email: namwangajoshua@gmail.com
+            </p>
+            <p class="text-neutral-400 text-sm">WhatsApp: +254 103 423 895</p>
+          </div>
+        </div>
+
+        <div
+          class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-600 gap-4"
+        >
+          <p>
+            &copy; <span id="year">2026</span> PhotographicsKE. All rights
+            reserved.
+          </p>
+          <p>Designed for PhotographicsKE Portfolio</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/254103423895"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with PhotographicsKE on WhatsApp"
+      class="fixed right-[25px] bottom-[25px] z-[999] flex items-center gap-2.5 px-5 py-3.5 bg-[#25d366] text-white rounded-full text-[0.78rem] font-bold shadow-2xl transition duration-300 hover:-translate-y-1 hover:shadow-emerald-900/30"
+    >
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"
+        />
+      </svg>
+      <span class="max-[600px]:hidden tracking-wide">Chat on WhatsApp</span>
+    </a>
+  </body>
+</html>
