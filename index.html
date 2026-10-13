@@ -44,6 +44,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist.css" />
+    
   </head>
 
   <body
@@ -620,397 +621,304 @@
         </div>
       </section>
 
-      <section
-        class="compare py-24 bg-void text-white border-t border-white/10"
-        id="compare"
+      <section class="py-[100px] bg-charcoal text-white" id="compare">
+  <div class="container mx-auto px-6">
+    <div class="section-heading mb-10">
+      <p class="section-label text-[0.75rem] tracking-[0.2em] font-bold text-gold mb-3">
+        QUALITY &amp; RETOUCHING
+      </p>
+      <h2 class="section-title font-serif text-4xl">
+        Before &amp; <em class="italic text-gold">After.</em>
+      </h2>
+      <p class="mt-3 text-neutral-400">
+        Drag the slider left and right to compare raw capture vs. final color grading.
+      </p>
+    </div>
+
+    <!-- Main Comparison Wrapper -->
+    <div 
+      class="relative w-full h-[500px] max-[600px]:h-[350px] overflow-hidden select-none border border-white/10 rounded-lg shadow-2xl" 
+      id="compareWrapper"
+    >
+      <!-- BOTTOM IMAGE: Final Edit (Full Color & High Contrast) -->
+      <img 
+        class="absolute inset-0 w-full h-full object-cover pointer-events-none" 
+        src="Images/Portfolio/People.png" 
+        alt="Final Edit"
+      />
+      <div class="absolute top-4 right-4 bg-gold text-ink font-bold text-[0.7rem] px-3 py-1.5 rounded uppercase tracking-wider z-10 shadow-md">
+        Final Edit
+      </div>
+
+      <!-- TOP IMAGE CONTAINER: RAW / Before (Clipped Container) -->
+      <div 
+        class="compare-before absolute top-0 left-0 bottom-0 w-1/2 overflow-hidden z-20 border-r-2 border-gold" 
+        id="compareBefore"
       >
-        <div class="container mx-auto px-6">
-          <div class="text-center max-w-2xl mx-auto mb-12">
-            <p
-              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-3"
-            >
-              QUALITY SHOWCASE
-            </p>
-            <h2 class="section-title">
-              Color Grading &amp;
-              <em class="italic text-gold">Retouching.</em>
-            </h2>
-            <p class="mt-4 text-neutral-400 text-sm">
-              Drag the interactive handle left and right to compare raw unedited
-              capture vs. final polished grading.
-            </p>
-          </div>
-
-          <!-- Interactive Comparison Widget -->
-          <div
-            class="max-w-4xl mx-auto relative rounded-lg overflow-hidden shadow-2xl border border-white/20 before-after-container aspect-[16/10] bg-charcoal"
-            id="sliderContainer"
-          >
-            <!-- After Image (Full Background) -->
-            <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80"
-              alt="Edited Portrait with color grading"
-              class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-            />
-            <span
-              class="absolute top-4 right-4 bg-gold text-ink font-bold text-xs px-3 py-1 rounded shadow"
-              >FINAL EDIT</span
-            >
-
-            <!-- Before Image (Clipped Overlay) -->
-            <div
-              class="before-overlay absolute inset-0 w-1/2 overflow-hidden select-none pointer-events-none"
-              id="beforeOverlay"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=80"
-                alt="Raw Portrait"
-                class="absolute inset-0 w-full h-full object-cover max-w-none grayscale brightness-75 contrast-75"
-                id="beforeImg"
-              />
-              <span
-                class="absolute top-4 left-4 bg-black/80 text-white font-bold text-xs px-3 py-1 rounded border border-white/20"
-                >RAW / BEFORE</span
-              >
-            </div>
-
-            <!-- Draggable Handle Bar -->
-            <div
-              class="slider-handle absolute top-0 bottom-0 left-1/2 w-1 bg-gold cursor-ew-resize -translate-x-1/2 z-20 flex items-center justify-center"
-              id="sliderHandle"
-            >
-              <div
-                class="w-10 h-10 bg-gold text-ink rounded-full shadow-2xl flex items-center justify-center font-bold text-lg select-none"
-              >
-                ⟷
-              </div>
-            </div>
-          </div>
+        <!-- TOP IMAGE: Desaturated / RAW Filter via Tailwind v4 -->
+       <img 
+  class="absolute top-0 left-0 h-full max-w-none object-cover pointer-events-none" 
+  id="compareBeforeImg"
+  src="Images/Portfolio/People.png" 
+  alt="RAW Capture"
+  style="filter: saturate(20%) contrast(70%) brightness(110%);"
+/>
+        <div class="absolute top-4 left-4 bg-black/80 text-white font-bold text-[0.7rem] px-3 py-1.5 rounded uppercase tracking-wider z-30 backdrop-blur-sm border border-white/10">
+          RAW / Unedited
         </div>
-      </section>
+      </div>
 
-      <section class="portfolio py-24 bg-cream" id="portfolio">
-        <div class="container mx-auto px-6">
-          <!-- Header & Filter Tabs -->
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
-          >
-            <div>
-              <p
-                class="text-[0.75rem] tracking-[0.25em] font-bold text-gold-dark uppercase mb-3"
-              >
-                SELECTED WORK
-              </p>
-              <h2 class="section-title text-ink">
-                Our
-                <em class="italic text-gold-dark">portfolio.</em>
-              </h2>
-            </div>
-
-            <!-- Category Filters -->
-            <div
-              class="filter-buttons flex flex-wrap gap-2"
-              role="group"
-              aria-label="Filter gallery"
-            >
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="events">Events</button>
-              <button class="filter-btn" data-filter="portraits">
-                Portraits
-              </button>
-              <button class="filter-btn" data-filter="photography">
-                Photography
-              </button>
-              <button class="filter-btn" data-filter="branding">
-                Branding
-              </button>
-            </div>
-          </div>
-
-          <!-- Gallery Grid -->
-          <div
-            class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            id="portfolioGrid"
-          >
-            <!-- Portfolio Item 1 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="events"
-              data-title="Event Stories &amp; Celebrations"
-              data-sub="Corporate &amp; Social Galas"
-              data-src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Sony A7 IV"
-              data-lens="24-70mm f/2.8 GM"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
-                  alt="Event photography"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Events</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  Event Stories
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-
-            <!-- Portfolio Item 2 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="portraits"
-              data-title="Studio &amp; Location Portraits"
-              data-sub="Professional Headshots"
-              data-src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Canon EOS R5"
-              data-lens="85mm f/1.4 L"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
-                  alt="Portrait photography"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Portraits</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  People &amp; Personalities
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-
-            <!-- Portfolio Item 3 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="branding"
-              data-title="Visual Brand Identity"
-              data-sub="Campaign Concepts"
-              data-src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Graphic Suite"
-              data-lens="Vector &amp; Print"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80"
-                  alt="Brand design"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Branding</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  Brand Identity Design
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-
-            <!-- Portfolio Item 4 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="photography"
-              data-title="Behind The Scenes Studio"
-              data-sub="Creative Lighting"
-              data-src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Sony A7S III"
-              data-lens="35mm f/1.4 GM"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"
-                  alt="Behind the lens photography"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Photography</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  Behind The Lens
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-
-            <!-- Portfolio Item 5 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="portraits"
-              data-title="Executive &amp; Corporate Portraits"
-              data-sub="Editorial Style"
-              data-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Nikon Z7 II"
-              data-lens="105mm f/2.8 Macro"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                  alt="Executive portrait"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Portraits</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  Executive Headshots
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-
-            <!-- Portfolio Item 6 -->
-            <div
-              class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
-              data-category="events"
-              data-title="Summit &amp; Conference Coverage"
-              data-sub="Nairobi Keynotes"
-              data-src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80"
-              data-camera="Sony FX3"
-              data-lens="70-200mm f/2.8"
-            >
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
-                  alt="Corporate event"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white"
-              >
-                <span
-                  class="text-gold text-xs font-bold uppercase tracking-widest"
-                  >Events</span
-                >
-                <h3 class="font-serif text-2xl font-semibold mt-1">
-                  Corporate Summits
-                </h3>
-                <p class="text-xs text-neutral-300 mt-2">
-                  Click to expand high-res view
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="testimonials py-20 bg-charcoal text-white border-t border-white/10"
+      <!-- Drag Handle -->
+      <div 
+        class="compare-slider absolute top-0 bottom-0 left-1/2 z-30 w-1 bg-gold cursor-ew-resize -ml-0.5 flex items-center justify-center" 
+        id="compareSlider"
       >
-        <div class="container mx-auto px-6">
-          <div class="text-center max-w-xl mx-auto mb-12">
-            <p
-              class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-2"
-            >
-              TESTIMONIALS
-            </p>
-            <h2 class="font-serif text-3xl md:text-4xl font-semibold">
-              Client Words
-            </h2>
+        <div class="w-8 h-8 rounded-full bg-gold text-ink font-bold flex items-center justify-center shadow-xl border-2 border-white">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7l-5 5 5 5M16 7l5 5-5 5"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ================= PORTFOLIO SECTION ================= -->
+<section class="portfolio py-24 bg-cream" id="portfolio">
+  <div class="container mx-auto px-6">
+    <!-- Header & Filter Tabs -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <p class="text-[0.75rem] tracking-[0.25em] font-bold text-gold-dark uppercase mb-3">
+          SELECTED WORK
+        </p>
+        <h2 class="section-title text-ink">
+          Our <em class="italic text-gold-dark">portfolio.</em>
+        </h2>
+      </div>
+
+      <!-- Category Filters -->
+    <div class="filter-buttons flex gap-2.5 mb-[30px] flex-wrap" role="group" aria-label="Filter portfolio by category">
+                    <button class="filter-btn active px-[18px] py-[10px] border border-neutral-200 bg-transparent cursor-pointer text-[0.75rem] font-bold transition duration-300" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn px-[18px] py-[10px] border border-neutral-200 bg-transparent cursor-pointer text-[0.75rem] font-bold transition duration-300" data-filter="photography" aria-pressed="false">Photography</button>
+                    <button class="filter-btn px-[18px] py-[10px] border border-neutral-200 bg-transparent cursor-pointer text-[0.75rem] font-bold transition duration-300" data-filter="events" aria-pressed="false">Events</button>
+                    <button class="filter-btn px-[18px] py-[10px] border border-neutral-200 bg-transparent cursor-pointer text-[0.75rem] font-bold transition duration-300" data-filter="portraits" aria-pressed="false">Portraits</button>
+                    <button class="filter-btn px-[18px] py-[10px] border border-neutral-200 bg-transparent cursor-pointer text-[0.75rem] font-bold transition duration-300" data-filter="branding" aria-pressed="false">Branding</button>
+                </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+      
+      <!-- Portfolio Item 1 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="events"
+        data-title="Event Stories &amp; Celebrations"
+        data-sub="Corporate &amp; Social Galas"
+        data-src="Images/Portfolio/EventStory.jpg"
+        data-camera="Sony A7 IV"
+        data-lens="24-70mm f/2.8 GM"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/EventStory.jpg"
+            alt="Event photography"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Events</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Event Stories</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="portraits"
+        data-title="Studio &amp; Location Portraits"
+        data-sub="Professional Headshots"
+        data-src="Images/Portfolio/People2.png"
+        data-camera="Canon EOS R5"
+        data-lens="85mm f/1.4 L"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/People2.png"
+            alt="Portrait photography"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Portraits</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">People &amp; Personalities</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="branding"
+        data-title="Visual Brand Identity"
+        data-sub="Campaign Concepts"
+        data-src="Images/Portfolio/MOMENTSS.jpg"
+        data-camera="Graphic Suite"
+        data-lens="Vector &amp; Print"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/MOMENTSS.jpg"
+            alt="Brand design"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Branding</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Brand Identity Design</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 4 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="photography"
+        data-title="Behind The Scenes Studio"
+        data-sub="Creative Lighting"
+        data-src="Images/Portfolio/Establishment.jpg"
+        data-camera="Sony A7S III"
+        data-lens="35mm f/1.4 GM"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/Establishment.jpg"
+            alt="Behind the lens photography"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Photography</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Behind The Lens</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 5 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="portraits"
+        data-title="Executive &amp; Corporate Portraits"
+        data-sub="Editorial Style"
+        data-src="Images/Portfolio/Purity.png"
+        data-camera="Nikon Z7 II"
+        data-lens="105mm f/2.8 Macro"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/Purity.png"
+            alt="Executive portrait"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Portraits</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Executive Headshots</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 6 -->
+      <div
+        class="portfolio-item group relative overflow-hidden rounded-md bg-charcoal cursor-pointer shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+        data-category="events"
+        data-title="Summit &amp; Conference Coverage"
+        data-sub="Nairobi Keynotes"
+        data-src="Images/Portfolio/EventStory.jpg"
+        data-camera="Sony FX3"
+        data-lens="70-200mm f/2.8"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            src="Images/Portfolio/EventStory.jpg"
+            alt="Corporate event"
+            loading="lazy"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end text-white">
+          <span class="text-gold text-xs font-bold uppercase tracking-widest">Events</span>
+          <h3 class="font-serif text-2xl font-semibold mt-1">Corporate Summits</h3>
+          <p class="text-xs text-neutral-300 mt-2">Click to expand high-res view</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS SECTION ================= -->
+<section class="testimonials py-20 bg-charcoal text-white border-t border-white/10">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-xl mx-auto mb-12">
+      <p class="text-[0.75rem] tracking-[0.25em] font-bold text-gold uppercase mb-2">
+        TESTIMONIALS
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold">Client Words</h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto relative bg-graphite p-8 md:p-12 rounded-lg border border-white/10 shadow-xl">
+      <div id="testimonialContainer" class="transition-opacity duration-300">
+        <p class="text-gold text-4xl font-serif mb-4">“</p>
+        <p class="text-base md:text-lg text-neutral-200 italic leading-relaxed mb-6" id="testimonialText">
+          PhotographicsKE delivered exceptional coverage for our annual regional summit in Nairobi. The turnaround time for press-ready photos was under 24 hours and the quality was world-class.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold text-ink font-bold flex items-center justify-center font-serif text-lg" id="testimonialAvatar">
+            EA
           </div>
-
-          <div
-            class="max-w-3xl mx-auto relative bg-graphite p-8 md:p-12 rounded-lg border border-white/10 shadow-xl"
-          >
-            <div
-              id="testimonialContainer"
-              class="transition-opacity duration-300"
-            >
-              <p class="text-gold text-4xl font-serif mb-4">“</p>
-              <p
-                class="text-base md:text-lg text-neutral-200 italic leading-relaxed mb-6"
-                id="testimonialText"
-              >
-                PhotographicsKE delivered exceptional coverage for our annual
-                regional summit in Nairobi. The turnaround time for press-ready
-                photos was under 24 hours and the quality was world-class.
-              </p>
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-12 h-12 rounded-full bg-gold text-ink font-bold flex items-center justify-center font-serif text-lg"
-                  id="testimonialAvatar"
-                >
-                  EA
-                </div>
-                <div>
-                  <h4
-                    class="font-bold text-white text-base"
-                    id="testimonialName"
-                  >
-                    Emmanuel A.
-                  </h4>
-                  <p class="text-xs text-neutral-400" id="testimonialRole">
-                    Communications Director, East Africa Summit
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Controls -->
-            <div
-              class="flex gap-3 justify-end mt-6 pt-4 border-t border-white/10"
-            >
-              <button
-                id="prevTestimonial"
-                class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors"
-              >
-                ←
-              </button>
-              <button
-                id="nextTestimonial"
-                class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors"
-              >
-                →
-              </button>
-            </div>
+          <div>
+            <h4 class="font-bold text-white text-base" id="testimonialName">
+              Emmanuel A.
+            </h4>
+            <p class="text-xs text-neutral-400" id="testimonialRole">
+              Communications Director, East Africa Summit
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Carousel Controls with SVG Arrows -->
+      <div class="flex gap-3 justify-end mt-6 pt-4 border-t border-white/10">
+        <button
+          id="prevTestimonial"
+          aria-label="Previous testimonial"
+          class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button
+          id="nextTestimonial"
+          aria-label="Next testimonial"
+          class="w-9 h-9 rounded-full border border-white/20 hover:border-gold hover:text-gold flex items-center justify-center transition-colors cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="packages py-24 bg-[#eeece6]" id="packages">
         <div class="container mx-auto px-6">
@@ -1477,5 +1385,7 @@
       </svg>
       <span class="max-[600px]:hidden tracking-wide">Chat on WhatsApp</span>
     </a>
+    <script src="./script.js"></script>
   </body>
+  
 </html>

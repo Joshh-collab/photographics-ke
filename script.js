@@ -238,49 +238,68 @@ window.addEventListener("scroll", () => {
         });
 
         // 4. Before/After Retouching Interactive Slider
-        const sliderContainer = document.getElementById("sliderContainer");
-        const sliderHandle = document.getElementById("sliderHandle");
-        const beforeOverlay = document.getElementById("beforeOverlay");
-        let isDragging = false;
+const sliderContainer = document.getElementById("sliderContainer") || document.getElementById("compareWrapper");
+const sliderHandle = document.getElementById("sliderHandle") || document.getElementById("compareSlider");
+const beforeOverlay = document.getElementById("beforeOverlay") || document.getElementById("compareBefore");
+const beforeImg = document.getElementById("compareBeforeImg") || (beforeOverlay ? beforeOverlay.querySelector("img") : null);
 
-        const updateSliderPosition = (x) => {
-          const rect = sliderContainer.getBoundingClientRect();
-          let offsetX = x - rect.left;
-          if (offsetX < 0) offsetX = 0;
-          if (offsetX > rect.width) offsetX = rect.width;
+if (sliderContainer && sliderHandle && beforeOverlay) {
+  let isDragging = false;
 
-          const percentage = (offsetX / rect.width) * 100;
-          sliderHandle.style.left = `${percentage}%`;
-          beforeOverlay.style.width = `${percentage}%`;
-        };
+  // Syncs top image width to container width so the image clips without squishing
+  const syncImageWidth = () => {
+    if (beforeImg) {
+      beforeImg.style.width = `${sliderContainer.offsetWidth}px`;
+    }
+  };
 
-        const onMove = (e) => {
-          if (!isDragging) return;
-          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-          updateSliderPosition(clientX);
-        };
+  // Initial call & listener for window resizes
+  syncImageWidth();
+  window.addEventListener("resize", syncImageWidth);
 
-        sliderContainer.addEventListener("mousedown", (e) => {
-          isDragging = true;
-          onMove(e);
-        });
-        window.addEventListener("mouseup", () => {
-          isDragging = false;
-        });
-        window.addEventListener("mousemove", onMove);
+  const updateSliderPosition = (x) => {
+    const rect = sliderContainer.getBoundingClientRect();
+    let offsetX = x - rect.left;
+    if (offsetX < 0) offsetX = 0;
+    if (offsetX > rect.width) offsetX = rect.width;
 
-        sliderContainer.addEventListener(
-          "touchstart",
-          (e) => {
-            isDragging = true;
-            onMove(e);
-          },
-          { passive: true },
-        );
-        window.addEventListener("touchend", () => {
-          isDragging = false;
-        });
-        window.addEventListener("touchmove", onMove, { passive: true });
+    const percentage = (offsetX / rect.width) * 100;
+    sliderHandle.style.left = `${percentage}%`;
+    beforeOverlay.style.width = `${percentage}%`;
+  };
+
+  const onMove = (e) => {
+    if (!isDragging) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    updateSliderPosition(clientX);
+  };
+
+  sliderContainer.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    onMove(e);
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  window.addEventListener("mousemove", onMove);
+
+  sliderContainer.addEventListener(
+    "touchstart",
+    (e) => {
+      isDragging = true;
+      onMove(e);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("touchend", () => {
+    isDragging = false;
+  });
+
+  window.addEventListener("touchmove", onMove, { passive: true });
+}
 
         // 5. Lightbox Modal Gallery Logic
         const lightboxModal = document.getElementById("lightboxModal");
